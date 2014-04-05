@@ -1,4 +1,4 @@
-# Kappa\Utils
+# Kappa\Utils [![Build Status](https://travis-ci.org/Kappa-org/Utils.svg?branch=master)](https://travis-ci.org/Kappa-org/Utils)
 
 Collection of utilities
 
