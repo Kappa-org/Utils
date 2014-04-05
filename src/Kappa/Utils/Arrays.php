@@ -10,13 +10,11 @@
 
 namespace Kappa\Utils;
 
-use Nette\Object;
-
 /**
  * Class Arrays
  * @package Kappa\Utils
  */
-class Arrays extends Object
+class Arrays extends \Nette\Utils\Arrays
 {
 	/**
 	 * @param array $arrays
