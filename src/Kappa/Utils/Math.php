@@ -48,25 +48,13 @@ class Math extends Object
 
 	/**
 	 * @param array $items
-	 * @return bool|float
+	 * @return mixed
 	 */
 	public static function modus(array $items)
 	{
-		$key = 0;
-		$value = 0;
-		$twice = false;
-		foreach ($items as $index => $item) {
-			$count = count(Arrays::filterByKey($items, $item));
-			if ($count > $value) {
-				$value = $count;
-				$key = $index;
-				$twice = false;
-			}
-			if ($count == $value && $items[$key] != $item) {
-				$twice = true;
-			}
-		}
+		$counted = array_count_values($items);
+		$max = max($counted);
 
-		return (!$twice) ? $items[$key] : false;
+		return array_search($max, $counted);
 	}
 }
