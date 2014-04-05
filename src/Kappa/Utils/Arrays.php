@@ -48,24 +48,4 @@ class Arrays extends \Nette\Utils\Arrays
 
 		return $output;
 	}
-
-	/**
-	 * @param array $items
-	 * @param string $key
-	 * @return array
-	 * @throws \Kappa\Utils\InvalidArgumentException
-	 */
-	public static function filterByKey(array $items, $key)
-	{
-		if (!is_string($key) && !is_numeric($key))
-			throw new InvalidArgumentException("Class " . __METHOD__ . "error! Second parameter must be string");
-		$output = array();
-		foreach ($items as $index => $item) {
-			if ($item == $key) {
-				$output[$index] = $item;
-			}
-		}
-
-		return $output;
-	}
 }
