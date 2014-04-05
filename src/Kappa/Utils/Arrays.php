@@ -93,20 +93,4 @@ class Arrays extends \Nette\Utils\Arrays
 
 		return $output;
 	}
-
-	/**
-	 * @param array $items
-	 * @return array
-	 */
-	public static function getOnlyFilled(array $items)
-	{
-		$result = array();
-		foreach ($items as $key => $val) {
-			if ($val) {
-				$result[$key] = $val;
-			}
-		}
-
-		return $result;
-	}
 }
