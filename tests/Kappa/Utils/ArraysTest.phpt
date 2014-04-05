@@ -47,25 +47,6 @@ class ArraysTest extends TestCase
 	}
 
 	/**
-	 * @param array $input
-	 * @param array $byIndex
-	 * @param array $byValues
-	 * @dataProvider providerGetByKey
-	 */
-	public function testGetByKey(array $input, array $byIndex, array $byValues)
-	{
-		Assert::same($byIndex, Arrays::getByKey($input, "Tests", true));
-		Assert::same($byValues, Arrays::getByKey($input, "D:"));
-		Assert::same(array(), Arrays::getByKey($input, 0, true));
-		Assert::throws(function () use ($input) {
-			$betByKey = Arrays::getByKey($input, "D:", "test");
-		}, '\Kappa\Utils\InvalidArgumentException');
-		Assert::throws(function () use ($input) {
-			$betByKey = Arrays::getByKey($input, array("X"));
-		}, '\Kappa\Utils\InvalidArgumentException');
-	}
-
-	/**
 	 * @return array
 	 */
 	public function providerSortBySubArray()
@@ -125,38 +106,6 @@ class ArraysTest extends TestCase
 						'data' => array('name' => 'Zavak')
 					)
 				)
-			)
-		);
-	}
-
-	/**
-	 * @return array
-	 */
-	public function providerGetByKey()
-	{
-		return array(
-			array(
-				array(
-					"Kappa\\Tests\\One" => "D:/Kappa/Tests/One.php",
-					"Kappa\\Tests\\Two" => "D:/Kappa/Tests/Two.php",
-					"Kappa\\Tests\\Three\\One" => "D:/Kappa/Test/Three/One.php",
-					"Kappa\\Test\\Four" => "D:/Kappa/Test/Four.php",
-					"Kappa\\Tests\\Four" => "C:/Kappa/Tests/Four.php"
-				),
-
-				array(
-					"Kappa\\Tests\\One" => "D:/Kappa/Tests/One.php",
-					"Kappa\\Tests\\Two" => "D:/Kappa/Tests/Two.php",
-					"Kappa\\Tests\\Three\\One" => "D:/Kappa/Test/Three/One.php",
-					"Kappa\\Tests\\Four" => "C:/Kappa/Tests/Four.php"
-				),
-
-				array(
-					"Kappa\\Tests\\One" => "D:/Kappa/Tests/One.php",
-					"Kappa\\Tests\\Two" => "D:/Kappa/Tests/Two.php",
-					"Kappa\\Tests\\Three\\One" => "D:/Kappa/Test/Three/One.php",
-					"Kappa\\Test\\Four" => "D:/Kappa/Test/Four.php",
-				),
 			)
 		);
 	}

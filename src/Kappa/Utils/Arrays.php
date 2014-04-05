@@ -52,31 +52,6 @@ class Arrays extends \Nette\Utils\Arrays
 	/**
 	 * @param array $items
 	 * @param string $key
-	 * @param bool $byIndex
-	 * @return array
-	 * @throws \Kappa\Utils\InvalidArgumentException
-	 */
-	public static function getByKey(array $items, $key, $byIndex = false)
-	{
-		if (!is_string($key) && !is_int($key))
-			throw new InvalidArgumentException('Class ' . __METHOD__ . ' required string as second parameter!');
-		if (!is_bool($byIndex))
-			throw new InvalidArgumentException('Class ' . __METHOD__ . ' require bool as last parameter');
-		foreach ($items as $index => $item) {
-			if ($byIndex)
-				$data = explode($key, $index);
-			else
-				$data = explode($key, $item);
-			if (!array_key_exists(1, $data))
-				unset($items[$index]);
-		}
-
-		return $items;
-	}
-
-	/**
-	 * @param array $items
-	 * @param string $key
 	 * @return array
 	 * @throws \Kappa\Utils\InvalidArgumentException
 	 */
