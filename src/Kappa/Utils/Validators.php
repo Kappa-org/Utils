@@ -40,10 +40,11 @@ class Validators extends \Nette\Utils\Validators
 		} catch (\Exception $e) {
 			return false;
 		}
-		if (in_array($imageInfo['mime'], self::$imageMimeTypes))
+		if (in_array($imageInfo['mime'], self::$imageMimeTypes)) {
 			return true;
-		else
+		} else {
 			return false;
+		}
 	}
 
 	/**
