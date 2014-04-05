@@ -31,18 +31,4 @@ class Strings extends \Nette\Utils\Strings
 
 		return $first . $then;
 	}
-
-	/**
-	 * @param string $path
-	 * @return string
-	 * @throws \Kappa\Utils\InvalidArgumentException
-	 */
-	public static function repairPathSeparators($path)
-	{
-		if (!is_string($path))
-			throw new InvalidArgumentException('Class ' . __METHOD__ . ' requires string as parameter');
-		$patterns = array('\\', '/');
-
-		return (string)str_replace($patterns, DIRECTORY_SEPARATOR, $path);
-	}
 }

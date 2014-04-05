@@ -25,16 +25,7 @@ require_once __DIR__ . '/../bootstrap.php';
  */
 class StringsTest extends TestCase
 {
-	public function testRepairPathSeparators()
-	{
-		Assert::same("D:" . DIRECTORY_SEPARATOR . "Some" . DIRECTORY_SEPARATOR . "Path" . DIRECTORY_SEPARATOR . "With" . DIRECTORY_SEPARATOR . "Some" . DIRECTORY_SEPARATOR . "File" . DIRECTORY_SEPARATOR . "Other" . DIRECTORY_SEPARATOR . "file.txt", Strings::repairPathSeparators("D:/Some\\Path/With\\Some\\File/Other/file.txt"));
-		Assert::throws(function () {
-			Strings::repairPathSeparators(array());
-		}, '\Kappa\Utils\InvalidArgumentException');
-		Assert::throws(function () {
-			Strings::repairPathSeparators(new \stdClass());
-		}, '\Kappa\Utils\InvalidArgumentException');
-	}
+
 }
 
 \run(new StringsTest());
