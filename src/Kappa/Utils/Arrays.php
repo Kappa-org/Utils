@@ -51,42 +51,6 @@ class Arrays extends \Nette\Utils\Arrays
 
 	/**
 	 * @param array $items
-	 * @param null $delimiter
-	 * @return string
-	 * @throws \Kappa\Utils\InvalidArgumentException
-	 */
-	public static function toString(array $items, $delimiter = null)
-	{
-		if ($delimiter !== null && !is_string($delimiter) && !is_int($delimiter))
-			throw new InvalidArgumentException("Class " . __METHOD__ . " required as delimiter string or int type");
-		$toString = null;
-		if ($delimiter) {
-			$i = 0;
-			foreach ($items as $item) {
-				if (is_string($item)) {
-					$toString .= $item;
-					if (array_key_exists($i + 1, $items) && is_string($items[$i + 1]))
-						$toString .= $delimiter;
-					$i++;
-				}
-			}
-		} else {
-			$i = 0;
-			foreach ($items as $item) {
-				if (is_string($item)) {
-					$toString .= $item;
-					if (array_key_exists($i + 1, $items) && is_string($items[$i + 1]))
-						$toString .= ',';
-					$i++;
-				}
-			}
-		}
-
-		return trim($toString);
-	}
-
-	/**
-	 * @param array $items
 	 * @param string $key
 	 * @param bool $byIndex
 	 * @return array

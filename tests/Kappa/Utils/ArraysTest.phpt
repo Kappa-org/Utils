@@ -48,23 +48,6 @@ class ArraysTest extends TestCase
 
 	/**
 	 * @param array $input
-	 * @param string $noDelimiter
-	 * @param string $withDelimiter
-	 * @param string $withSubArray
-	 * @dataProvider providerToString
-	 */
-	public function testToString(array $input, $noDelimiter, $withDelimiter, $withSubArray)
-	{
-		Assert::same($noDelimiter, Arrays::toString($input));
-		Assert::same($withDelimiter, Arrays::toString($input, " -()- "));
-		Assert::same($withSubArray, Arrays::toString(array("one", 1 => array("two", "three"))));
-		Assert::throws(function () use ($input) {
-			$toString = Arrays::toString($input, array("a"));
-		}, '\Kappa\Utils\InvalidArgumentException');
-	}
-
-	/**
-	 * @param array $input
 	 * @param array $byIndex
 	 * @param array $byValues
 	 * @dataProvider providerGetByKey
@@ -143,16 +126,6 @@ class ArraysTest extends TestCase
 					)
 				)
 			)
-		);
-	}
-
-	/**
-	 * @return array
-	 */
-	public function providerToString()
-	{
-		return array(
-			array(array("one", "two", "three"), "one,two,three", "one -()- two -()- three", "one")
 		);
 	}
 
