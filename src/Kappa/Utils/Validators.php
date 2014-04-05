@@ -60,7 +60,7 @@ class Validators extends \Nette\Utils\Validators
 			throw new InvalidArgumentException("Class " . __METHOD__ . " requires array, string or numeric as second parameter");
 		$header = @get_headers($url);
 		preg_match('#HTTP/\d.\d ([0-9]*)#', $header[0], $code);
-		if(isset($code[1])) {
+		if (isset($code[1])) {
 			if (is_array($codes) && in_array($code[1], $codes)) {
 				return true;
 			} else {
@@ -91,8 +91,9 @@ class Validators extends \Nette\Utils\Validators
 	 */
 	public static function isValidUrlString($string)
 	{
-		if(!is_string($string))
+		if (!is_string($string))
 			throw new InvalidArgumentException('Class ' . __METHOD__ . ' requires string as parameter');
+
 		return (bool)preg_match('#^([a-z0-9-_.]*)$#i', $string);
 	}
 }

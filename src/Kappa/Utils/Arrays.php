@@ -45,10 +45,9 @@ class Arrays extends \Nette\Utils\Arrays
 		foreach ($sort as $key => $row) {
 			$output[] = $arrays[$key];
 		}
+
 		return $output;
 	}
-
-
 
 	/**
 	 * @param array $items
@@ -82,10 +81,9 @@ class Arrays extends \Nette\Utils\Arrays
 				}
 			}
 		}
+
 		return trim($toString);
 	}
-
-
 
 	/**
 	 * @param array $items
@@ -108,6 +106,7 @@ class Arrays extends \Nette\Utils\Arrays
 			if (!array_key_exists(1, $data))
 				unset($items[$index]);
 		}
+
 		return $items;
 	}
 
@@ -119,14 +118,15 @@ class Arrays extends \Nette\Utils\Arrays
 	 */
 	public static function filterByKey(array $items, $key)
 	{
-		if(!is_string($key) && !is_numeric($key))
+		if (!is_string($key) && !is_numeric($key))
 			throw new InvalidArgumentException("Class " . __METHOD__ . "error! Second parameter must be string");
 		$output = array();
-		foreach($items as $index => $item) {
-			if($item == $key) {
+		foreach ($items as $index => $item) {
+			if ($item == $key) {
 				$output[$index] = $item;
 			}
 		}
+
 		return $output;
 	}
 

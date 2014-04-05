@@ -46,8 +46,6 @@ class ArraysTest extends TestCase
 		}, '\Kappa\Utils\InvalidArgumentException');
 	}
 
-
-
 	/**
 	 * @param array $input
 	 * @param string $noDelimiter
@@ -64,8 +62,6 @@ class ArraysTest extends TestCase
 			$toString = Arrays::toString($input, array("a"));
 		}, '\Kappa\Utils\InvalidArgumentException');
 	}
-
-
 
 	/**
 	 * @param array $input
@@ -85,8 +81,6 @@ class ArraysTest extends TestCase
 			$betByKey = Arrays::getByKey($input, array("X"));
 		}, '\Kappa\Utils\InvalidArgumentException');
 	}
-
-
 
 	/**
 	 * @return array
@@ -152,8 +146,6 @@ class ArraysTest extends TestCase
 		);
 	}
 
-
-
 	/**
 	 * @return array
 	 */
@@ -163,8 +155,6 @@ class ArraysTest extends TestCase
 			array(array("one", "two", "three"), "one,two,three", "one -()- two -()- three", "one")
 		);
 	}
-
-
 
 	/**
 	 * @return array

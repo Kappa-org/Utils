@@ -28,6 +28,7 @@ class Strings extends \Nette\Utils\Strings
 			throw new InvalidArgumentException("Class " . __METHOD__ . " required string as first parameter");
 		$first = mb_strtoupper(mb_substr($string, 0, 1, $encoding), 'UTF-8');
 		$then = mb_substr($string, 1, strlen($string), $encoding);
+
 		return $first . $then;
 	}
 
@@ -38,9 +39,10 @@ class Strings extends \Nette\Utils\Strings
 	 */
 	public static function repairPathSeparators($path)
 	{
-		if(!is_string($path))
+		if (!is_string($path))
 			throw new InvalidArgumentException('Class ' . __METHOD__ . ' requires string as parameter');
 		$patterns = array('\\', '/');
+
 		return (string)str_replace($patterns, DIRECTORY_SEPARATOR, $path);
 	}
 }

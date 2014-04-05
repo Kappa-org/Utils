@@ -34,12 +34,14 @@ class Math extends Object
 	public static function median(array $items)
 	{
 		sort($items);
-		if(count($items) % 2 == 0) {
+		if (count($items) % 2 == 0) {
 			$middle = count($items) / 2;
 			$median = self::average(array($items[$middle], $items[$middle - 1]));
+
 			return $median;
 		} else {
 			$median = floor(count($items) / 2);
+
 			return $median;
 		}
 	}
@@ -53,17 +55,18 @@ class Math extends Object
 		$key = 0;
 		$value = 0;
 		$twice = false;
-		foreach($items as $index => $item) {
+		foreach ($items as $index => $item) {
 			$count = count(Arrays::filterByKey($items, $item));
-			if($count > $value) {
+			if ($count > $value) {
 				$value = $count;
 				$key = $index;
 				$twice = false;
 			}
-			if($count == $value && $items[$key] != $item) {
+			if ($count == $value && $items[$key] != $item) {
 				$twice = true;
 			}
 		}
+
 		return (!$twice) ? $items[$key] : false;
 	}
 }
