@@ -25,7 +25,10 @@ require_once __DIR__ . '/../bootstrap.php';
  */
 class StringsTest extends TestCase
 {
-
+	public function testMb_ucfirst()
+	{
+		Assert::same('Černobyl', Strings::mb_ucfirst('černobyl'));
+	}
 }
 
 \run(new StringsTest());

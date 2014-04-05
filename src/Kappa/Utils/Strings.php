@@ -22,11 +22,11 @@ class Strings extends \Nette\Utils\Strings
 	 * @return string
 	 * @throws \Kappa\Utils\InvalidArgumentException
 	 */
-	public static function mb_ucfirst($string, $encoding)
+	public static function mb_ucfirst($string, $encoding = 'UTF-8')
 	{
 		if (!is_string($string))
 			throw new InvalidArgumentException("Class " . __METHOD__ . " required string as first parameter");
-		$first = mb_strtoupper(mb_substr($string, 0, 1, $encoding), 'UTF-8');
+		$first = mb_strtoupper(mb_substr($string, 0, 1, $encoding), $encoding);
 		$then = mb_substr($string, 1, strlen($string), $encoding);
 
 		return $first . $then;
