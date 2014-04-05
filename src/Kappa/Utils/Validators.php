@@ -83,17 +83,4 @@ class Validators extends \Nette\Utils\Validators
 	{
 		return self::checkHttpStatus($url, array(200, 301, 302));
 	}
-
-	/**
-	 * @param string $string
-	 * @return bool
-	 * @throws \Kappa\Utils\InvalidArgumentException
-	 */
-	public static function isValidUrlString($string)
-	{
-		if (!is_string($string))
-			throw new InvalidArgumentException('Class ' . __METHOD__ . ' requires string as parameter');
-
-		return (bool)preg_match('#^([a-z0-9-_.]*)$#i', $string);
-	}
 }

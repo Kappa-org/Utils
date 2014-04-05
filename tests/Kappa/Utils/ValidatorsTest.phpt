@@ -70,17 +70,6 @@ class ValidatorsTest extends TestCase
 			Validators::checkHttpStatus("http://google.com", "300");
 		}, '\Kappa\Utils\InvalidArgumentException');
 	}
-
-	public function testIsValidUrlString()
-	{
-		Assert::true(Validators::isValidUrlString("testLetter0942-test_please.string"));
-		Assert::throws(function () {
-			Validators::isValidUrlString(array());
-		}, '\Kappa\Utils\InvalidArgumentException');
-		Assert::throws(function () {
-			Validators::isValidUrlString(new \stdClass());
-		}, '\Kappa\Utils\InvalidArgumentException');
-	}
 }
 
 \run(new ValidatorsTest());
