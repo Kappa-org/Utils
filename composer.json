@@ -1,0 +1,33 @@
+{
+	"name": "kappa/utils",
+	"description": "Collection of utilities",
+	"keywords": ["Kappa", "Nette", "utils", "utilities"],
+	"homepage": "https://github.com/Kappa-org/Utils",
+	"license": ["BSD-3-Clause", "GPL-2.0", "GPL-3.0"],
+	"type": "library",
+	"minimum-stability": "dev",
+	"authors": [
+		{
+			"name": "Ondřej Záruba",
+			"homepage": "http://zaruba-ondrej.cz"
+		}
+	],
+	"support": {
+		"email": "zarubaondra@gmail.com",
+		"issues": "https://github.com/Kappa-org/Utils/issues"
+	},
+	"require": {
+		"nette/utils": "2.2.*"
+	},
+	"require-dev": {
+		"kappa/tester": "1.0.*"
+	},
+	"autoload": {
+		"psr-0": {
+			"Kappa": "src/"
+		},
+		"classmap": [
+			"src/Kappa/Utils/exceptions.php"
+		]
+	}
+}
