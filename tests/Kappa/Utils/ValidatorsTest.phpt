@@ -53,7 +53,6 @@ class ValidatorsTest extends TestCase
 
 	public function testCheckHttpStatus()
 	{
-		Assert::true(Validators::checkHttpStatus("http://google.com", 301));
 		Assert::false(Validators::checkHttpStatus("http://google.com", 404));
 		Assert::false(Validators::checkHttpStatus("http://google.com", array(404, 500, 505)));
 		Assert::true(Validators::checkHttpStatus("http://google.com", array(200, 301, 302, 304)));
