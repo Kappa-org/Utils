@@ -5,7 +5,6 @@
 	"homepage": "https://github.com/Kappa-org/Utils",
 	"license": ["BSD-3-Clause"],
 	"type": "library",
-	"minimum-stability": "dev",
 	"authors": [
 		{
 			"name": "Ondřej Záruba",
@@ -17,7 +16,7 @@
 		"issues": "https://github.com/Kappa-org/Utils/issues"
 	},
 	"require": {
-		"nette/utils": "2.2.*"
+		"nette/utils": "~2.2"
 	},
 	"require-dev": {
 		"kappa/tester": "1.1.*"
