@@ -41,7 +41,7 @@ class MathTest extends TestCase
 
 	public function testModus()
 	{
-		Assert::same(7, Math::modus(array(1,2,3,4,4,5,6,7,7,7,8)));
+		Assert::same([7], Math::modus(array(1,2,3,4,4,5,6,7,7,7,8)));
 		Assert::same([4, 7], Math::modus(array(1,2,3,4,4,4, 5,6,7,7,7,8)));
 	}
 }
