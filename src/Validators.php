@@ -12,7 +12,9 @@ namespace Kappa\Utils;
 
 /**
  * Class Validators
+ *
  * @package Kappa\Utils
+ * @author Ondřej Záruba <http://zaruba-ondrej.cz>
  */
 class Validators extends \Nette\Utils\Validators
 {

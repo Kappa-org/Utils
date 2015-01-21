@@ -12,7 +12,9 @@ namespace Kappa\Utils;
 
 /**
  * Class InvalidArgumentException
+ *
  * @package Kappa\Utils
+ * @author Ondřej Záruba <http://zaruba-ondrej.cz>
  */
 class InvalidArgumentException extends \InvalidArgumentException
 {

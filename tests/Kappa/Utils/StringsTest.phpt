@@ -21,7 +21,9 @@ require_once __DIR__ . '/../bootstrap.php';
 
 /**
  * Class StringsTest
+ *
  * @package Kappa\Tests\Utils\Strings
+ * @author Ondřej Záruba <http://zaruba-ondrej.cz>
  */
 class StringsTest extends TestCase
 {

@@ -12,7 +12,9 @@ namespace Kappa\Utils;
 
 /**
  * Class Strings
+ *
  * @package Kappa\Utils
+ * @author Ondřej Záruba <http://zaruba-ondrej.cz>
  */
 class Strings extends \Nette\Utils\Strings
 {

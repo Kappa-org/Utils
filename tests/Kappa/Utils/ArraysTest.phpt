@@ -21,7 +21,9 @@ require_once __DIR__ . '/../bootstrap.php';
 
 /**
  * Class ArraysTest
+ *
  * @package Kappa\Tests\Arrays
+ * @author Ondřej Záruba <http://zaruba-ondrej.cz>
  */
 class ArraysTest extends TestCase
 {

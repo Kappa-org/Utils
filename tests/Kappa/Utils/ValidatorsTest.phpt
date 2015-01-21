@@ -21,7 +21,9 @@ require_once __DIR__ . '/../bootstrap.php';
 
 /**
  * Class ValidatorsTest
+ *
  * @package Kappa\Tests\Validators
+ * @author Ondřej Záruba <http://zaruba-ondrej.cz>
  */
 class ValidatorsTest extends TestCase
 {

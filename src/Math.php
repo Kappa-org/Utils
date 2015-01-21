@@ -14,7 +14,9 @@ use Nette\Object;
 
 /**
  * Class Math
+ *
  * @package Kappa\Utils
+ * @author Ondřej Záruba <http://zaruba-ondrej.cz>
  */
 class Math extends Object
 {

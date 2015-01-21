@@ -12,7 +12,9 @@ namespace Kappa\Utils;
 
 /**
  * Class Arrays
+ *
  * @package Kappa\Utils
+ * @author Ondřej Záruba <http://zaruba-ondrej.cz>
  */
 class Arrays extends \Nette\Utils\Arrays
 {
