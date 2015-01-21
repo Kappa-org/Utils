@@ -1,14 +1,9 @@
 {
   "name": "kappa/utils",
   "description": "Collection of utilities",
-  "keywords": [
-    "Kappa",
-    "Nette",
-    "utils",
-    "utilities"
-  ],
+  "keywords": ["Kappa", "Nette", "utils", "utilities"],
   "homepage": "https://github.com/Kappa-org/Utils",
-  "license": ["BSD-3-Clause"],
+  "license": "BSD-3-Clause",
   "type": "library",
   "authors": [
     {
