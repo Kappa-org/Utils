@@ -12,10 +12,10 @@
 
 namespace Kappa\Tests\Utils\Strings;
 
-use Kappa\Tester\TestCase;
 use Kappa\Utils\Strings;
 use Nette;
 use Tester\Assert;
+use Tester\TestCase;
 
 require_once __DIR__ . '/../bootstrap.php';
 
