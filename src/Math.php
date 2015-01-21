@@ -34,15 +34,13 @@ class Math extends Object
 	public static function median(array $items)
 	{
 		sort($items);
+		$midst = (int)floor(count($items) / 2);
 		if (count($items) % 2 == 0) {
-			$middle = count($items) / 2;
-			$median = self::average(array($items[$middle], $items[$middle - 1]));
+			$median = self::average(array($items[$midst], $items[$midst - 1]));
 
 			return $median;
 		} else {
-			$median = floor(count($items) / 2);
-
-			return $median;
+			return $items[$midst];
 		}
 	}
 
