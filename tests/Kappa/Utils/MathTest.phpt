@@ -20,7 +20,9 @@ require_once __DIR__ . '/../bootstrap.php';
 
 /**
  * Class MathTest
+ *
  * @package Kappa\Utils\Tests
+ * @author Ondřej Záruba <http://zaruba-ondrej.cz>
  */
 class MathTest extends TestCase
 {
