@@ -46,13 +46,15 @@ class Math extends Object
 
 	/**
 	 * @param array $items
-	 * @return mixed
+	 * @return array
 	 */
 	public static function modus(array $items)
 	{
 		$counted = array_count_values($items);
 		$max = max($counted);
+		$filtered = array_filter($counted, function($val) use($max) {return $val == $max;});
+		$keys = array_keys($filtered);
 
-		return array_search($max, $counted);
+		return $keys;
 	}
 }
