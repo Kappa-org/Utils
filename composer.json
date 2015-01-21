@@ -1,32 +1,37 @@
 {
-	"name": "kappa/utils",
-	"description": "Collection of utilities",
-	"keywords": ["Kappa", "Nette", "utils", "utilities"],
-	"homepage": "https://github.com/Kappa-org/Utils",
-	"license": ["BSD-3-Clause"],
-	"type": "library",
-	"authors": [
-		{
-			"name": "Ondřej Záruba",
-			"homepage": "http://zaruba-ondrej.cz"
-		}
-	],
-	"support": {
-		"email": "zarubaondra@gmail.com",
-		"issues": "https://github.com/Kappa-org/Utils/issues"
-	},
-	"require": {
-		"nette/utils": "~2.2"
-	},
-	"require-dev": {
-		"kappa/tester": "1.1.*"
-	},
-	"autoload": {
-		"psr-0": {
-			"Kappa": "src/"
-		},
-		"classmap": [
-			"src/Kappa/Utils/exceptions.php"
-		]
-	}
+  "name": "kappa/utils",
+  "description": "Collection of utilities",
+  "keywords": [
+    "Kappa",
+    "Nette",
+    "utils",
+    "utilities"
+  ],
+  "homepage": "https://github.com/Kappa-org/Utils",
+  "license": ["BSD-3-Clause"],
+  "type": "library",
+  "authors": [
+    {
+      "name": "Ondřej Záruba",
+      "homepage": "http://zaruba-ondrej.cz"
+    }
+  ],
+  "support": {
+    "email": "zarubaondra@gmail.com",
+    "issues": "https://github.com/Kappa-org/Utils/issues"
+  },
+  "require": {
+    "nette/utils": "~2.2"
+  },
+  "require-dev": {
+    "kappa/tester": "1.1.*"
+  },
+  "autoload": {
+    "psr-0": {
+      "Kappa": "src/"
+    },
+    "classmap": [
+      "src/Kappa/Utils/exceptions.php"
+    ]
+  }
 }
