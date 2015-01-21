@@ -28,6 +28,10 @@ class StringsTest extends TestCase
 	public function testMb_ucfirst()
 	{
 		Assert::same('Černobyl', Strings::mb_ucfirst('černobyl'));
+		Assert::same('Prague', Strings::mb_ucfirst('prague'));
+		Assert::throws(function() {
+			Strings::mb_ucfirst(array());
+		}, 'Kappa\Utils\InvalidArgumentException');
 	}
 }
 
