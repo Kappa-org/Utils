@@ -38,7 +38,7 @@ class Math extends Object
 		sort($items);
 		$midst = (int)floor(count($items) / 2);
 		if (count($items) % 2 == 0) {
-			$median = self::average(array($items[$midst], $items[$midst - 1]));
+			$median = self::average([$items[$midst], $items[$midst - 1]]);
 
 			return $median;
 		} else {
