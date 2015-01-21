@@ -4,7 +4,7 @@ Collection of utilities
 
 ## Requirements:
 
-* PHP 5.3.3 or higher
+* PHP 5.4 or higher
 * [Nette\Uitls](https://github.com/nette/utils) 2.2.*
 
 ## Installation:
