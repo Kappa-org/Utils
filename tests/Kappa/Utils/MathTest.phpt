@@ -27,6 +27,8 @@ class MathTest extends TestCase
 	public function testAverage()
 	{
 		Assert::same(9.75, Math::average(array(1,4,8,7,5,2,63,6,4,7,8,2)));
+		$average = Math::average(array(1,4,8,7,5,2,63,6,4,7,8));
+		Assert::true($average > 10.454545 && $average < 10.46);
 	}
 
 	public function testMedian()
