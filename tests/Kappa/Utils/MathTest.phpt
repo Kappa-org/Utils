@@ -39,10 +39,10 @@ class MathTest extends TestCase
 		Assert::same(6, Math::median(array(1,4,8,7,5,2,63,6,4,7,8)));
 	}
 
-	public function testModus()
+	public function testMode()
 	{
-		Assert::same([7], Math::modus(array(1,2,3,4,4,5,6,7,7,7,8)));
-		Assert::same([4, 7], Math::modus(array(1,2,3,4,4,4, 5,6,7,7,7,8)));
+		Assert::same([7], Math::mode(array(1,2,3,4,4,5,6,7,7,7,8)));
+		Assert::same([4, 7], Math::mode(array(1,2,3,4,4,4, 5,6,7,7,7,8)));
 	}
 }
 

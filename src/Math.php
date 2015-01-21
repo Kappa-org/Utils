@@ -48,7 +48,7 @@ class Math extends Object
 	 * @param array $items
 	 * @return array
 	 */
-	public static function modus(array $items)
+	public static function mode(array $items)
 	{
 		$counted = array_count_values($items);
 		$max = max($counted);
