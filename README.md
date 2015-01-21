@@ -9,7 +9,7 @@ Collection of utilities
 
 ## Installation:
 
-The best way to install Kappa\Utils is using Composer:
+The best way to install Kappa\Utils is using [Composer](https://getcomposer.org):
 
 ```bash
 $ composer require kappa/utils:@dev
